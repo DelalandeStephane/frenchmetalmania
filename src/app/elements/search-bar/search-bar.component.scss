@@ -1,0 +1,35 @@
+.search-form {
+    width: 350px;
+    margin: auto;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 30px;
+}
+
+.search-field {
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    padding-left: 15px;
+    padding-right: 50px;
+    box-shadow: rgba(0, 0, 0, 0.40) 0px -25px 36px -27px inset;
+}
+.search-btn {
+    border: none;
+    background: none;
+    position: absolute;
+    right: 12px;
+    bottom: 9px;
+    cursor: pointer;
+    img{
+        width: 35px;
+        opacity: 0.5;
+    }
+    img:hover {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+}
