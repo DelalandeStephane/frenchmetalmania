@@ -1,4 +1,10 @@
-<form class="search-form" action="">
-    <input class="search-field" type="text" [placeholder]="searchPlaceHolder">
-    <button class="search-btn" type="submit"><img [src]="searchImgUrl" alt=""></button>
+<form class="search-form">
+    <input 
+    class="search-field" 
+    name="searchValue" 
+    type="text" 
+    [placeholder]="searchPlaceHolder"
+    [(ngModel)]="searchValue"
+    >
+    <button class="search-btn" type="submit" (click)="searchSubmit()"><img [src]="searchImgUrl" alt=""></button>
 </form>

@@ -2,6 +2,14 @@
     display: flex;
     justify-content: space-between;
     background-color: var(--secondary-color);
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+}
+
+.header-logo {
+    width: 90px;
+    height: 121px;
 }
 a {
     color: white;
@@ -11,9 +19,7 @@ a {
         display: flex;
         align-items: center;
         h1{
-            font-size: 2.2rem;
-            margin-top: -30px;
-            margin-left: -23px;
+            font-size: 2.4rem;
             span:first-of-type {
                 color: var(--flag-color-1);
             }
@@ -23,16 +29,12 @@ a {
         }
 }
 
-.header-logo {
-    width: 100px;
-    height: 132px;
-}
 
 .nav-header-list {
     display: flex;
     align-items: flex-end;
     li {
-        border-left: 1px solid red;
+        border-left: 10px solid red;
         font-size: 1.2rem;
         height: 100%;
         padding-bottom: 5px;
@@ -43,4 +45,45 @@ a {
             padding:0 15px;
         }
     }
+}
+
+@media screen and (max-width : 1000px) {
+    .header-logo {
+        width: 100px;
+        height: 135px;
+    }
+    .deco-title {
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .nav-header-list {
+        li {
+            font-size: 1rem;
+            border-left: 1px solid red;
+        }
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .header-logo {
+        width: 72px;
+        height: 97px;
+    }
+    .deco-title {
+        h1 {
+            font-size: 1.3rem;
+            width: 100px;
+            line-height: 22px;
+        }
+    }
+    .nav-header-list {
+        li {
+            font-size: 1rem;
+            border-left: 1px solid red;
+        }
+    }
+
 }

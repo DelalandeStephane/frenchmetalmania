@@ -1,0 +1,32 @@
+<ul class="alphabet-filter">
+    <li [ngClass]="{ 'active': filterSelected === 'special-caract'}" (click)="filterByLetterEvent('special-caract')">(0-1 ...)</li>
+    <li *ngFor="let letter of alphabet" [ngClass]="{ 'active': filterSelected === letter }" (click)="filterByLetterEvent(letter)">{{ letter }}</li>
+    <li *ngIf="filterSelected" class="reset-letter" (click)="filterByLetterEvent('all')">RESET</li>
+
+</ul>
+<form class="filter-form" [formGroup]="filterForm">
+    <label for="location">
+        <p>Par régions</p>
+        <select (change)="filterSubmit()" name="" id="location" formControlName="location">
+            <option value=""></option>
+            <option 
+            *ngFor="let location of locationList" [ngValue]="location">{{ location }}</option>
+        </select>
+    </label>
+    <label for="genre">
+        <p>Par genre</p>
+        <select (change)="filterSubmit()" name="" id="genre" formControlName="genre">
+            <option value=""></option>
+            <option *ngFor="let genre of genreList" [ngValue]="genre">{{ genre }}</option>
+        </select>
+    </label>
+    <label for="status">
+        <p>Par status</p>
+        <select (change)="filterSubmit()" name="" id="status" formControlName="status">
+            <option value=""></option>
+            <option *ngFor="let status of statusList" [ngValue]="status">{{ status }}</option>
+        </select>
+    </label>
+</form>
+<button *ngIf="filterBand"  class="action-btn reset-btn" type="reset" (click) = "resetFilter()" >reset</button>
+

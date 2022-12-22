@@ -1,0 +1,21 @@
+.band-container{
+    max-width: 1024px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+//loader
+
+.result-length {
+    text-align: center;
+    font-size: 1.5rem;
+}
+@keyframes spin-01 {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+

@@ -1,1 +1,13 @@
-<p>card works!</p>
+<li 
+(mouseenter)="textScroll($event)" 
+class="card-band"
+>
+    <div class="band-sm-legend">
+        <h2 >{{ bandData.band_name}}</h2>
+        <p>{{ bandData.band_genre}}</p>
+        <p>{{bandData.band_country!= ' ' ? bandData.band_country : 'Localisation non commniquée'}}</p> 
+    </div>
+    <div class="flag-line flag-line-3"></div>
+    <div class="flag-line flag-line-2"></div>
+    <div class="flag-line flag-line-1"></div>
+</li>

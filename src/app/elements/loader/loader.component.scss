@@ -1,0 +1,25 @@
+.full-window-loader {
+    position:fixed;
+    z-index: 12;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: (#000000), $alpha: 0.2);
+  }
+
+.loader__01 {
+    position: relative;
+	animation: spin-01 2s ease-in-out infinite;
+    height: 200px;
+	width: 200px;
+	margin: auto;
+    top: 50%;
+    z-index: 15;
+	border: 20px solid rgba(255, 255, 255, 0.9) {
+		left-color: blue;
+		right-color: red;
+		radius: 50%;
+    }
+
+}

@@ -1,0 +1,19 @@
+
+li {
+    cursor: pointer;
+    font-family: var(--main-font);
+    font-weight: bold;
+    
+    padding: 5px;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background: var(--secondary-color);
+        color: var(--main-color);
+    }
+}
+
+.active {
+    background: var(--secondary-color);
+    color: var(--main-color);
+}

@@ -1,0 +1,22 @@
+
+<div *ngIf="bandObservable$ | async as band" class="popup-container" id="popup-container" (click)="closePopup($event)" @bandModal>
+    <div class="popup-content">
+        <button class="action-btn leave-btn" id="leave-btn" (click)="closePopup($event)">X</button>
+        <img class="band-img" [src]="band.photoUrl" alt="">
+        <div class="band-content">
+            <h2>{{ band.name}}</h2>
+            <p>{{ band.genre }}</p>
+            <p>Status : <span class="status-state"[ngStyle]="{'background-color' : statusColor}"></span> {{ band.status}}</p>
+            <p>Localisation : {{ band.location }}</p>
+            <p>Label : {{ band.label }}</p>                   
+            <p> Thème des paroles : {{ band.themes }}</p>
+            <p>Créé en : {{ band.formYear }}</p>
+            <p>Années d'activités : {{ band.yearsActive }}</p>
+            <a [href]="'https://www.metal-archives.com/bands/sieversiever/'+band.id" target="_blank"  class="action-btn more-btn">Voir plus</a>
+        </div>
+
+        <div class="flag-line flag-line-3"></div>
+        <div class="flag-line flag-line-2"></div>
+        <div class="flag-line flag-line-1"></div>
+    </div>
+</div>

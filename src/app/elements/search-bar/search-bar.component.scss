@@ -1,9 +1,13 @@
 .search-form {
     width: 350px;
     margin: auto;
-    position: relative;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     border-radius: 30px;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 121px;
+    z-index: 5;
 }
 
 .search-field {
@@ -31,5 +35,38 @@
     img:hover {
         opacity: 1;
         transition: opacity 0.5s;
+    }
+}
+
+@media screen and (max-width : 1000px) {
+
+    .search-form {
+        top: 135px;
+    }
+    .search-btn {
+        img {
+            width: 30px;
+            height: 27px;
+        }
+    }
+}
+
+@media screen and (max-width : 600px) {
+
+    .search-form {
+        width: 300px;
+        top: 97px;
+    }
+
+    .search-field {
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    .search-btn {
+        bottom: 6px;
+        img {
+            width: 25px;
+            height: 22px;
+        }
     }
 }

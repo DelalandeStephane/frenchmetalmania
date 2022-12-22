@@ -1,0 +1,101 @@
+.card-band {
+    width: 300px;
+    height: 120px;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    transition: box-shadow 0.2s linear ,transform 0.2s linear ;
+    margin: 15px;
+    padding: 8px 2px;
+    cursor: pointer;
+}
+
+.card-band:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 19px 32px, rgba(0, 0, 0, 0.22) 0px 15px 15px;
+    .flag-line {
+        transform: scaleX(3);
+    }
+}
+
+.band-sm-legend {
+    color: #fff;
+    font-family: var(--main-font);
+    padding: 10px;
+    h2 {
+        scroll-behavior: smooth;
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        position: relative;
+        transition: top 0.2s linear;
+        top: 0;
+        font-weight: normal;
+        margin-top: -15px;
+        margin-bottom: 5px;
+        z-index: 3;
+    }
+    p {
+        scroll-behavior: smooth;
+        max-width: 250px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: clip;
+        line-height: 20px;
+        margin-left: 5px;
+    }
+
+    
+}
+
+
+.flag-line {
+    position: absolute;
+    height: 150px;
+    border-right: 2px solid red;
+    border-bottom:2px solid red ;
+    opacity: 0.6;
+    transition: transform 0.4s ease-in-out ;
+}
+
+.flag-line-1 {
+    bottom: 8px;
+    right: 7px;
+    border-bottom-right-radius: 14px;
+    width: 250px;
+    border-color: var(--flag-color-3);
+}
+
+.flag-line-2 {
+    bottom: 15px;
+    right: 14px;
+    border-bottom-right-radius: 9px;
+    width: 220px;
+    border-color: var(--flag-color-2);
+}
+
+.flag-line-3 {
+    bottom: 22px;
+    right: 21px;
+    border-bottom-right-radius: 5px;
+    width: 190px;
+    border-color: var(--flag-color-1);
+}
+
+@media screen and (max-width : 600px) {
+    .band-sm-legend {
+        h2 {
+            font-size: 1.4rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+
+    }
+
+}
+

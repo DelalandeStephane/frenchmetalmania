@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',
@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class SearchBarComponent implements OnInit {
 
   searchImgUrl: string = "assets/img/search.svg";
-  searchPlaceHolder : string ="Groupe, localisation, style, ..."
+  searchPlaceHolder : string ="Trouver un groupe";
+  @Output() searchValueEmit = new EventEmitter<string>;
+  searchValue!: string;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  searchSubmit() {
+    this.searchValueEmit.emit(this.searchValue);
+  }
 }

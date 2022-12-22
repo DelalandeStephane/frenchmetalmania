@@ -1,2 +1,16 @@
-<app-search-bar></app-search-bar>
-<div class="container"></div>
+ <app-search-bar (searchValueEmit)="bandSpecialSearch($event)"></app-search-bar>
+<app-filter 
+(filterEvent)="getFilteredBands($event)"
+></app-filter>
+<p *ngIf="(bandsObservable$ |async)?.length as bandLength" class="result-length">{{ bandLength }}
+     groupe{{ bandLength > 1 ? 's' : ''}} trouvé{{ bandLength > 1 ? 's' : ''}}</p>
+<p *ngIf="!(bandsObservable$ |async)?.length" class="result-length">pas de groupes trouvés</p>
+<div class="band-container" id="band-container">
+    <app-loader class="full-window-loader" [dataLoading]="dataLoading"></app-loader>
+    <app-card *ngFor="let data of bandsObservable$ | async" [bandData]="data" (click)="OnSelectBand(data.band_id)"></app-card>
+</div>
+<app-band-popup 
+*ngIf="popupCall" 
+(popupCloseEvent)="closePopup($event)"
+(loadingEvent)="bandLoading($event)"  
+[bandId]="selectedBandId"></app-band-popup>
